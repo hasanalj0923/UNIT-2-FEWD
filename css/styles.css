@@ -1,1 +1,542 @@
+/* Base styles for mobile first */
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;  
+}
 
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Set background color to white */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    min-height: 100vh; /* Ensure the body takes full height of the viewport */
+}
+
+main {
+    background-color: lightblue; /* Ensure consistency in tablet view */
+}
+
+/* Base styles for mobile-first approach */
+header {
+    background: #f9f9f9;
+    color: #000;
+    padding: 10px 5%; /* Responsive padding */
+    display: flex;
+    flex-direction: column; /* Stacks items on mobile */
+    align-items: center; /* Center header content horizontally */
+}
+
+/* Centering the navigation */
+nav {
+    width: 100%; /* Full width for nav */
+}
+
+/* Target the unordered list with the class main-nav */
+.main-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Reset margin to avoid spacing issues */
+    display: flex; /* Start with flex for mobile */
+    flex-direction: column; /* Stacked on mobile */
+    align-items: center; /* Center navigation links */
+    width: 100%; /* Full width */
+}
+
+/* Style for list items */
+.main-nav li {
+    width: calc(100% - 10px); /* Full width minus 10px for margin */
+    margin: 5px 0; /* Margin for spacing between items */
+}
+
+/* Style for links */
+.main-nav li a {
+    background-color: #fff; /* Solid white background for links */
+    color: #000; /* Text color for links */
+    padding: 5px; /* Padding inside links */
+    height: 30px; /* Fixed height */
+    width: 100%; /* Full width of the parent list item */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link fill the entire list item */
+    text-align: center; /* Center text */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.main-nav li a:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+    color: #333; /* Change text color on hover */
+}
+
+/* Main content styles */
+.main-content p {
+    margin: 20px auto 30px;
+    line-height: 1.5;
+    text-align: center; /* Center text */
+    max-width: 85%; /* Use percentage for fluid layout */
+    padding: 10px 5%; /* Responsive padding */
+    font-size: 14px;
+    color: #333;
+}
+
+.main-content img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+}
+
+h2 {
+    text-align: center; /* Center section headings */
+    margin-top: 20px;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #ffffff;
+    padding: 20px 5%; /* Responsive padding */
+    text-align: center; /* Center all portfolio text */
+}
+
+.portfolio-heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+    color: #007BFF; /* Change this to your desired color */
+    
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center portfolio items */
+}
+
+.portfolio-unit {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    max-width: 90%;
+    transition: transform 0.3s; /* Prepare for scaling */
+}
+
+.portfolio-unit:hover {
+    transform: scale(1.02); /* Scale up on hover */
+}
+
+.portfolio-unit img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.portfolio-unit h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    padding-bottom: 2px;
+}
+
+.portfolio-unit p {
+    font-size: 0.75rem;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center; /* Center-align paragraph text */
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center skills list */
+}
+
+#skills li {
+    margin: 5px 0;
+}
+
+#skills h2 {
+    text-transform: uppercase;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center; /* Center contact info */
+    width: 100%;
+    padding: 5px 0;
+    margin: 25px auto;
+}
+
+#contact h2 {
+    text-transform: uppercase;
+}
+
+#contact p {
+    max-width: 90%;
+    margin: 20px auto;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    hyphens: none;
+    font-size: 0.85rem;
+}
+
+.contact-info {
+    font-weight: bold;
+}
+
+/* Contact Divider */
+.contact-divider {
+    border: none; /* Remove default border */
+    height: 2px; /* Height of the line */
+    background-color: rgb(192, 192, 192); /* Line color */
+    margin: 20px; /* Margin for spacing: 20px top/bottom */
+}
+
+footer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    background: #f9f9f9; /* Light background for footer */
+    color: #000;
+    padding: 10px 2%; /* Default padding for mobile */
+}
+
+/* Left-aligned footer content */
+.footer-left {
+    text-align: left; /* Align text to the left */
+    margin: 0 5px; /* Remove vertical margin to avoid extra spacing */
+    padding: 0 5px; /* 5px top and bottom, 0 left and right */
+    font-weight: bold;
+}
+
+/* Back-to-top link */
+.back-to-top {
+    margin: 2px 2px 2px 0; /* 5px top, 5px right, 5px bottom, 0 left */
+    padding: 10px; /* Adjust padding for vertical spacing */
+    text-decoration: none; /* Remove underline from the link */
+    color: #000; /* Change link color as needed */
+    font-weight: bold; /* Make link bold */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.back-to-top:hover {
+    background-color: #000; /* Change background on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Right-aligned footer content */
+.footer-right {
+    display: flex; /* Display as flex for better spacing */
+    margin-left: auto; /* Push right content to the far right */
+}
+
+.footer-right ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Reset margin */
+    display: none; /* Hide links by default */
+}
+
+/* Footer navigation list items */
+.footer-right ul li {
+    margin: 5px 0; /* Space between links */
+}
+
+/* Footer navigation links */
+.footer-right ul li a {
+    color: #000; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.footer-right ul li a:hover {
+    color: #007BFF; /* Change link color on hover */
+}
+
+/* Footer headings hover effect */
+.footer-right h2:hover {
+    color: #007BFF; /* Change heading color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* Tablet styles (768px and above) */
+@media only screen and (min-width: 768px) {
+    header { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+
+    /* Override mobile styles for tablet view */
+    .main-nav {
+        flex-direction: row; /* Makes the navigation horizontal */
+        justify-content: center; /* Centers the nav items horizontally */
+        background-color: transparent; /* Background color reset */
+        padding: 0; /* Remove extra padding */
+    }
+
+    .main-nav li {
+        margin: 0 5px; /* Add horizontal spacing between nav items */
+        width: auto; /* Reset width to auto for inline layout */
+    }
+
+    .main-nav li a {
+        background-color: transparent; /* Remove background for horizontal nav */
+        padding: 5px 10px; /* Adjust padding for tablet view */
+        text-align: center;
+        color: #000;
+    }
+    
+    /* Main content section */
+    .main-content { 
+        display: flex; 
+        flex-direction: row-reverse; /* Puts the paragraph first, image second */
+        margin-bottom: 30px; /* Adds space below the main content to the portfolio */
+    }
+
+    .main-content p { 
+        flex: 1;
+        margin-left: 20px; /* Space between image and paragraph */
+        text-align: left;
+        max-width: 500px; /* Added a semicolon for consistency */
+    }
+
+    .main-content img {
+        max-width: 40%;
+        height: auto;
+        margin-right: 35px; /* Adds space between image and the right edge */
+        margin-bottom: 20px; /* Ensures space between image and element below */
+    }
+
+    /* Portfolio Section Styles */
+#portfolio {
+    padding: 20px; /* Adds padding around the section */
+}
+
+.portfolio-heading {
+    margin-bottom: 10px;
+    font-size: 1rem;
+   
+    
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Wrap items to new lines */
+    margin: 0;
+    padding: 0 10px; /* Add padding for container spacing */
+    justify-content: center; /* Center items horizontally */
+}
+
+.portfolio-unit {
+    flex: 1 1 calc(50% - 20px); /* Two items per row for tablet (768px) */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align all child elements */
+    justify-content: space-between; /* Ensure equal spacing inside each portfolio unit */
+}
+
+
+
+
+  
+    /* Image Styling */
+    .portfolio-unit img {
+        width: 100%; /* Makes the image responsive to the container's width */
+        height: auto; /* Maintains aspect ratio */
+        max-width: none; /* Prevents max width restriction on images */
+        padding: 0; /* Removed unnecessary padding */
+    }
+  
+    /* H2 Heading Styling */
+    .portfolio-unit h3 {
+        font-size: 1.5rem; /* Adjust the font size as needed */
+        color: #000; /* Use shorthand for color */
+        margin: 10px 0; /* Adds margin above and below the heading */
+    }
+  
+    /* Paragraph Styling */
+    .portfolio-unit p {
+        font-size: 1rem; /* Adjust the font size as needed */
+        color: #000; /* Use shorthand for color */
+        margin: 0; /* Removes default margin */
+    }
+        
+    #skills ul { 
+        list-style-type: none;
+        padding: 0;
+        margin: 0; /* Reset margin to avoid spacing issues */
+        display: flex;
+        justify-content: center; /* Centers the items horizontally */
+        align-items: center; /* Center items vertically */
+        flex-wrap: wrap; /* Allows items to wrap to a new line if necessary */
+    }
+
+    #skills li { 
+        margin: 0 10px; /* Adds spacing between each skill item */
+    }
+
+    #skills h2 {
+        margin-top: 30px;
+        
+      }
+    .contact-info {
+        font-weight: bold; /* Makes the text bold */
+    }
+
+    #contact p { 
+        max-width: 500px;
+    }
+    
+   
+    .contact-divider { 
+        margin: 10px 25px;
+    }
+
+    .main-footer { 
+        margin-bottom: 40px;
+    }
+    
+    .footer-left { 
+        font-size: .85rem;
+    }
+    
+    .back-to-top { 
+        display: none; /* Ensure this is only hidden on tablet view */
+    }
+    
+    .footer-right ul {
+        display: flex; /* Use flexbox for horizontal alignment */
+        justify-content: center; /* Center the items horizontally */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style-type: none; /* Remove bullet points */
+    }
+
+    .footer-right ul li {
+        margin: 0 10px; /* Add horizontal spacing between items */
+    }
+
+    .footer-right ul li a {
+        text-decoration: none; /* Remove underline from links */
+        color: #000; /* Use shorthand for color */
+        font-weight: bold;
+        font-size: .75rem;
+        text-transform: uppercase;
+    }
+}
+
+/* Media query for 1024px */
+@media only screen and (min-width: 1024px) {
+    header {
+        flex-direction: row; /* Align header items in a row */
+        justify-content: space-between; /* Space between header items */
+        padding: 10px 20px; /* Reduce padding to push content */
+    }
+
+
+    .main-nav {
+        flex-direction: row; /* Ensure nav is in a row */
+        align-items: center; /* Center items vertically */
+        margin-left: auto; /* Push nav to the right */
+    }
+
+    .main-nav li {
+        width: calc(100% - 10px); /* Full width minus 5px margin on each side */
+        margin: 5px 0; /* Margin for spacing between items */
+    }
+    
+    /* Add extra right margin to the last navigation link */
+    .main-nav li:last-child {
+        margin-right: 30px; /* Adjust this value as needed */
+    }
+    .header-left {
+        flex: 1; /* Allow the header title to take space */
+        text-align: left; /* Align left */
+        margin-left: 50px;
+        font-size: 1.25rem;
+    }
+
+    nav {
+        flex: 0; /* Prevent nav from growing */
+        text-align: right; /* Align right */
+    }
+
+    .main-content p {
+      font-size: 1.04rem;
+      max-width: 600px;
+    
+    }
+
+    .main-content img {
+        margin-right: 70px;
+
+    }
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #ffffff; /* Your desired background color */
+    padding: 20px; /* Padding around the section */
+    margin: 0 50px; /* Adds a left and right margin */
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Wrap items to new lines */
+    margin: 0;
+    padding: 0 10px; /* Add padding for container spacing */
+    justify-content: center; /* Center items horizontally */
+}
+
+.portfolio-unit {
+    flex: 1 1 calc(33.33% - 15px); /* Three items per row for desktop (1024px), reduced column gap */
+    padding: 10px; /* Padding inside each portfolio unit */
+    display: flex;
+    flex-direction: column; /* Align child elements vertically */
+    align-items: center; /* Center-align all child elements */
+    justify-content: flex-start; /* Align items at the top */
+    min-height: 300px; /* Adjust minimum height to allow more flexibility */
+    margin-bottom: 5px; /* Space between rows */
+}
+
+/* Image Styling */
+.portfolio-unit img {
+    width: 100%; /* Makes the image responsive to the container's width */
+    height: auto; /* Maintains aspect ratio */
+    max-width: none; /* Prevents max width restriction on images */
+    padding: 0; /* Removed unnecessary padding */
+}
+
+/* H2 Heading Styling */
+.portfolio-unit h3 {
+    font-size: 1.25rem; /* Adjust font size */
+    color: #000; /* Use shorthand for color */
+    margin: 5px 0; /* Reduce margin above and below the heading */
+    max-width: 90%; /* Prevent heading from being too wide */
+    text-align: center; /* Center the heading text */
+    overflow-wrap: break-word; /* Prevent heading from exceeding container width */
+}
+
+/* Paragraph Styling */
+.portfolio-unit p {
+    font-size: 0.85rem; /* Smaller paragraph font size */
+    color: #000; /* Use shorthand for color */
+    margin: 0; /* Remove default margin */
+    line-height: 1.2; /* Set a tighter line height for paragraphs */
+}
+
+   .contact-divider { 
+        margin: 10px 30px; /* Margin for the contact divider */
+    }
+
+    .back-to-top { 
+        display: none; 
+    }
+}
